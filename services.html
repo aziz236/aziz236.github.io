@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr" class="services">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xw9lpa+DPU5GwNZz0yn6DAAMa6WXgBWX9VSIPXdbn9v6x+iUzPCP0VH4ig+2Yr9U7HXU+K0PXqJ0SBXb9vP0Rw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Galaxie Technologie - Services</title>
+</head>
+<style>
+    body {
+        background-image: url('bgservices.jpg');
+        background-size: cover;
+    }
+    
+</style>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Galaxie Technologie Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html"><i class="fas fa-envelope"></i> Carrière</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="service-content">
+        <div class="service-box cybersecurity">
+            <h2>Cyber-sécurité</h2>
+            <button class="cta-button" onclick="showDetails('Cyber-sécurité')">Details</button>
+        </div>
+
+        <div class="service-box solutions-numeriques">
+            <h2>Solutions Numériques "Industrie Oil & Gas"</h2>
+            <button class="cta-button" onclick="showDetails('Solutions Numériques')">Details</button>
+        </div>
+
+        <div class="service-box formations">
+            <h2>Formations IT</h2>
+            <button class="cta-button" onclick="showDetails('Formations IT')">Details</button>
+        </div>
+
+        <div class="service-box sourcing">
+            <h2>Sourcing IT & Engineering</h2>
+            <button class="cta-button" onclick="showDetails('Sourcing IT & Engineering')">Details</button>
+        </div>
+
+        <div class="service-box creation-applications">
+            <h2>Applications mobiles & Sites Web</h2>
+            <button class="cta-button" onclick="showDetails('Applications mobiles & Sites Web')">Details</button>
+        </div>
+
+        <div class="service-box trading">
+            <h2>Trading</h2>
+            <button class="cta-button" onclick="showDetails('Trading')">Details</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-contact">
+            <div class="footer-info">
+                <h3><img src="adress2.png" alt="Map Marker Icon"> </h3>
+                <p>3 Route de Saclay, Palaiseau<br>91120 France</p>
+            </div>
+            <div class="footer-info">
+                <h3><img src="email2.png" alt="Envelope Icon"> </h3>
+                <p><a href="mailto:president@galaxietec.com" class="mail">president@galaxietec.com</a>
+                <p><a href="mailto:president@galaxietec.com" class="mail">directeur.commercial@galaxietec.com</a></p>
+            </div>
+            <div class="footer-info">
+                <h3><img src="phone.png" alt="Phone Icon"> </h3>
+                <p>+33 6 67 40 40 11</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this popup container at the end of your body -->
+    <div id="serviceDetailsPopup" class="modal">
+        <div class="modal-content">
+            <p><span class="close" onclick="closeDetailsPopup()">&times;</span></p>
+            <div id="serviceDetailsContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(service) {
+            var content = ''; // Add the detailed content based on the service
+
+            // Example: Provide different content for each service
+            if (service === 'Cyber-sécurité') {
+                content = "Notre équipe dédiée à la cybersécurité excelle dans la mise en œuvre complète des procédures visant à sécuriser vos applications, sites web et autres logiciels de l'entreprise. Nous offrons une approche personnalisée et rigoureuse, garantissant une protection robuste contre les menaces numériques. Si la sécurité de vos systèmes est une priorité, contactez-nous dès maintenant à l'adresse e-mail indiquée en bas de la page.";
+            } else if (service === 'Solutions Numériques') {
+                content = "Répondre à vos besoins spécifiques avec des solutions sur mesure est notre engagement dans le secteur pétrolier et gazier. Nos experts comprennent les défis uniques de votre industrie et proposent des solutions innovantes adaptées à vos problèmes. Pour transformer vos opérations, n'hésitez pas à nous contacter par e-mail, disponible en bas de cette page.";
+            } else if (service === 'Formations IT') {
+                content = "Nos formateurs qualifiés proposent une gamme étendue de formations dans divers domaines de l'IT, notamment dans le secteur pétrolier et gazier. Que ce soit pour renforcer les compétences de votre équipe existante ou pour une formation spécialisée, nous sommes prêts à répondre à vos besoins. Pour en savoir plus sur nos programmes de formation, veuillez nous contacter via l'adresse e-mail en bas de cette page.";
+            } else if (service === 'Sourcing IT & Engineering') {
+                content = "Nous simplifions vos missions en mettant à votre disposition des ingénieurs et des professionnels qualifiés dans divers domaines tels que l'informatique, le génie civil et le secteur pétrole et gaz. Leur expertise est adaptée à des missions de longue ou courte durée, offrant une solution flexible à vos besoins spécifiques. Notre processus de sourcing rigoureux garantit des profils correspondant précisément à vos exigences. Si vous recherchez des talents pour renforcer votre équipe, contactez-nous par e-mail grâce aux coordonnées en bas de cette page.";
+            } else if (service === 'Applications mobiles & Sites Web') {
+                content = "Notre équipe talentueuse excelle dans la conception et le développement de sites web et d'applications mobiles sur mesure. Que vous ayez besoin d'une présence en ligne robuste ou d'une application innovante, nous sommes là pour concrétiser votre vision. Pour discuter de votre projet, veuillez nous contacter via l'adresse e-mail mentionnée en bas de la page.";
+            } else if (service === 'Trading') {
+                content = "Notre expertise en Trading IT, Télécommunication et Équipement pétrolier et gazier vise à fournir des solutions complètes pour les besoins de votre entreprise. Que vous recherchiez une technologie de pointe dans l'IT et les télécommunications ou que vous souhaitiez sourcer des équipements de qualité pour l'industrie pétrolière et gazière, nous avons les connaissances et les ressources pour répondre à vos exigences. Contactez-nous via l'adresse e-mail fournie ci-dessous pour découvrir comment nos services de trading peuvent contribuer au succès de vos projets.";
+            }
+
+            // Add similar conditions for other services
+
+            document.getElementById('serviceDetailsContent').innerHTML = content;
+            document.getElementById('serviceDetailsPopup').style.display = 'block';
+        }
+
+        function closeDetailsPopup() {
+            document.getElementById('serviceDetailsPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
